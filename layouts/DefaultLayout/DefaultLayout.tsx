@@ -2,9 +2,9 @@ import React from 'react';
 import { Footer, Header, Sidebar } from '../../components';
 
 
-import { ILayoutProps } from './Layout.props';
+import { ILayoutProps } from './DefaultLayout.props';
 
-export const Layout = ({ children }: ILayoutProps): JSX.Element => {
+export const DefaultLayout = ({ children }: ILayoutProps): JSX.Element => {
   return (
     <>
       <Header />
