@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HTag, Button, PTag, Tag, Rating } from "../components";
-import { DefaultLayout, withDefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
+import { withDefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
 
 const Home = ():JSX.Element => {
   const [rating, setRating] = useState<number>(4);
