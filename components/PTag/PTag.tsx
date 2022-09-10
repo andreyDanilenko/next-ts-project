@@ -1,8 +1,8 @@
-import { PTagProps } from './PTag.props';
+import { IPTagProps } from './PTag.props';
 import styles from './PTag.module.css';
 import cn from 'classnames';
 
-export const PTag = ({ size = 'm', children, className, ...props }: PTagProps): JSX.Element => {
+export const PTag = ({ size = 'm', children, className, ...props }: IPTagProps): JSX.Element => {
 	return (
 		<p
 			className={cn(styles.p, className, {
