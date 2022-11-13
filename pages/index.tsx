@@ -4,6 +4,7 @@ import { withDefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
 import axios from 'axios';
 import { GetStaticProps } from "next";
 import { IMenuItem } from "../interfaces/menu.interface";
+import { ITopLevelCategory } from "../interfaces/page.interface";
 
 const Home = ({menu}: IHomeProps):JSX.Element => {
   const [rating, setRating] = useState<number>(4);
@@ -18,9 +19,6 @@ const Home = ({menu}: IHomeProps):JSX.Element => {
       <Button appearance="primary" arrow="right">Click</Button>
       <Button appearance="ghost" arrow="down">Click</Button>
       <Rating rating={rating} isEditable setRating={setRating} />
-      <ul>
-        {menu.map((m)=> (<li key={m._id.secondCategory} >{m._id.secondCategory}</li>))}
-      </ul>
     </>
   );
 };
@@ -43,5 +41,5 @@ export const getStaticProps: GetStaticProps = async() => {
 
 interface IHomeProps extends Record<string, unknown> {
   menu: IMenuItem[];
-  firstCategory: string;
+  firstCategory: ITopLevelCategory;
 }

@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { Footer, Header, Sidebar } from '../../components';
 import { ILayoutProps } from './DefaultLayout.props';
 import styles from './DefaultLayout.module.css';
+import { AppContextProvider, IAppContext } from '../../context/app.context';
 
 const DefaultLayout = ({ children }: ILayoutProps): JSX.Element => {
   return (
@@ -16,12 +17,14 @@ const DefaultLayout = ({ children }: ILayoutProps): JSX.Element => {
   );
 };
 
-export const withDefaultLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
+export const withDefaultLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
   return function withDefaultLayoutComponent(props: T): JSX.Element {
     return (
-      <DefaultLayout>
-        <Component {...props} />
-      </DefaultLayout>
+      <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+        <DefaultLayout>
+          <Component {...props} />
+        </DefaultLayout>
+      </AppContextProvider>
     );
   };
 };
