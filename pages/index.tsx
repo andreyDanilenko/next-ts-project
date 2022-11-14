@@ -8,6 +8,7 @@ import { ITopLevelCategory } from "../interfaces/page.interface";
 
 const Home = ({menu}: IHomeProps):JSX.Element => {
   const [rating, setRating] = useState<number>(4);
+
   return (
     <>
       <HTag tag="h3">Text</HTag>
