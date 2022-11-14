@@ -8,8 +8,6 @@ import { CourseIcon, ProductIcon, ServiceIcon, BookIcon, } from '../../assets/im
 import styles from './Menu.module.css';
 import { ITopLevelCategory } from '../../interfaces/page.interface';
 
-
-
 const firstLevelMenu: IFirstLevelMenuItem[] = [
 	{ route: 'courses', name: 'Курсы', icon: <CourseIcon />, id: ITopLevelCategory.Courses },
 	{ route: 'services', name: 'Сервисы', icon: <ServiceIcon />, id: ITopLevelCategory.Services },
