@@ -4,6 +4,7 @@ import BookIcon from './book.svg';
 import CourseIcon from './course.svg';
 import ProductIcon from './product.svg';
 import ServiceIcon from './service.svg';
+import LogoIcon from './logo.svg';
 
-export {ArrowIcon, StarIcon, BookIcon, CourseIcon, ProductIcon, ServiceIcon};
+export {ArrowIcon, StarIcon, BookIcon, CourseIcon, ProductIcon, LogoIcon, ServiceIcon};
 

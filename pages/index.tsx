@@ -27,7 +27,7 @@ const Home = ({menu}: IHomeProps):JSX.Element => {
 
 export default withDefaultLayout(Home);
 
-export const getStaticProps: GetStaticProps = async() => {
+export const getStaticProps: GetStaticProps<IHomeProps> = async() => {
   const firstCategory = 0;
   const {data: menu} = await axios.post<IMenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
     firstCategory
