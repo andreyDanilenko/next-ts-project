@@ -6,6 +6,17 @@ import ProductIcon from './product.svg';
 import ServiceIcon from './service.svg';
 import LogoIcon from './logo.svg';
 import RateIcon from './rate.svg';
+import CheckIcon from './check.svg';
 
-export {ArrowIcon, StarIcon, BookIcon, CourseIcon, ProductIcon, LogoIcon, ServiceIcon, RateIcon};
+export { 
+         ArrowIcon, 
+         StarIcon, 
+         BookIcon, 
+         CourseIcon, 
+         ProductIcon,
+         LogoIcon, 
+         ServiceIcon, 
+         RateIcon, 
+         CheckIcon,
+        };
 
