@@ -7,6 +7,8 @@ import ServiceIcon from './service.svg';
 import LogoIcon from './logo.svg';
 import RateIcon from './rate.svg';
 import CheckIcon from './check.svg';
+import SortIcon from './sort.svg';
+
 
 export { 
          ArrowIcon, 
@@ -18,5 +20,6 @@ export {
          ServiceIcon, 
          RateIcon, 
          CheckIcon,
+         SortIcon
         };
 
