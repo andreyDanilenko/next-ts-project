@@ -8,6 +8,7 @@ import LogoIcon from './logo.svg';
 import RateIcon from './rate.svg';
 import CheckIcon from './check.svg';
 import SortIcon from './sort.svg';
+import SearchIcon from './search.svg';
 
 
 export { 
@@ -20,6 +21,7 @@ export {
          ServiceIcon, 
          RateIcon, 
          CheckIcon,
-         SortIcon
+         SortIcon,
+         SearchIcon
         };
 

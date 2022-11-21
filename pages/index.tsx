@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { HTag, Button, PTag, Tag, Rating } from "../components";
+import { HTag, Button, PTag, Tag, Rating, Input, Textarea } from "../components";
 import { withDefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
 import axios from 'axios';
 import { GetStaticProps } from "next";
 import { IMenuItem } from "../interfaces/menu.interface";
 import { ITopLevelCategory } from "../interfaces/page.interface";
 
-const Home = ({menu}: IHomeProps):JSX.Element => {
+const Home = ({ menu }: IHomeProps): JSX.Element => {
   const [rating, setRating] = useState<number>(4);
 
   return (
@@ -20,6 +20,8 @@ const Home = ({menu}: IHomeProps):JSX.Element => {
       <Button appearance="primary" arrow="right">Click</Button>
       <Button appearance="ghost" arrow="down">Click</Button>
       <Rating rating={rating} isEditable setRating={setRating} />
+      <Input placeholder="text" />
+      <Textarea placeholder="text area"/>
     </>
   );
 };
@@ -27,15 +29,15 @@ const Home = ({menu}: IHomeProps):JSX.Element => {
 
 export default withDefaultLayout(Home);
 
-export const getStaticProps: GetStaticProps<IHomeProps> = async() => {
+export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
   const firstCategory = 0;
-  const {data: menu} = await axios.post<IMenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
+  const { data: menu } = await axios.post<IMenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
     firstCategory
   });
   return {
     props: {
-       menu, 
-       firstCategory
+      menu,
+      firstCategory
     }
   };
 };
